@@ -10,14 +10,17 @@ import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
 /**
- * 校验成功可以链接方式打开当前文件目录，每个目录都是一个超链接，可以递归访问。
+ * 校验成功可以链接方式打开当前文件目录，每个目录都是一个超链接，可以递归访问。<br>
  * 
+ * 测试地址：http://localhost:8080/src/main/java/com/shangpin/netty/
+ * 
+ *
  * @author percy
  *
  */
 public class HttpFileServer {
 
-	private static final String DEFAULT_URL = "/src/com/shangpin/netty";
+	private static final String DEFAULT_URL = "/src/main/java/com/shangpin/netty";
 
 	public void run(final int port, final String url) throws Exception {
 		EventLoopGroup bossGroup = new NioEventLoopGroup();
