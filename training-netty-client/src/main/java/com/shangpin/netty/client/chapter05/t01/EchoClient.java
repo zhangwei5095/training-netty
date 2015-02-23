@@ -13,8 +13,6 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.DelimiterBasedFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 
-import com.shangpin.netty.client.chapter04.linebased.TimeClient;
-
 public class EchoClient {
 
 	public void connect(int port, String host) throws Exception {
@@ -64,7 +62,7 @@ public class EchoClient {
 
 		// 客户端启动辅助类设置完成之后，调用connect方法发起异步连接，然后调用同步方法等待连接成功。
 		// 最后，当客户端连接关闭后，客户端主函数退出，在退出之前，释放NIO线程组的资源。
-		new TimeClient().connect(port, "127.0.0.1");
+		new EchoClient().connect(port, "127.0.0.1");
 	}
 
 }

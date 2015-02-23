@@ -9,8 +9,6 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
-import com.shangpin.netty.chapter04.linebased.TimeServer;
-
 public class EchoServer {
 
 	public void bind(int port) throws InterruptedException {
@@ -47,7 +45,7 @@ public class EchoServer {
 				// 采用默认值
 			}
 		}
-		new TimeServer().bind(port);
+		new EchoServer().bind(port);
 	}
 
 }
