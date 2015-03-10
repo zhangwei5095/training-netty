@@ -76,6 +76,7 @@ public class ChineseProverbServer {
 			b.group(group).channel(NioDatagramChannel.class)
 					.option(ChannelOption.SO_BROADCAST, true)
 					.handler(new ChineseProverbServerHandler());
+			b.bind(port).sync().channel().closeFuture().await();
 		} finally {
 			group.shutdownGracefully();
 		}

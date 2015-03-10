@@ -31,7 +31,7 @@ public class ChineseProverbServerHandler extends
 
 		String req = packet.content().toString(CharsetUtil.UTF_8);
 		System.out.println(req);
-		if ("谚语字段查询？".equals(req)) {
+		if ("谚语字典查询？".equals(req)) {
 			ctx.writeAndFlush(new DatagramPacket(Unpooled.copiedBuffer(
 					"谚语查询结果：" + nextQuote(), CharsetUtil.UTF_8), packet
 					.sender()));
